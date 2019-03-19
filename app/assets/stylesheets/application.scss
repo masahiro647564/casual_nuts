@@ -12,3 +12,16 @@
  *
  */
 @import "bootstrap";
+
+/* 共通のCSS*/
+
+no-gutters {
+  margin:0;
+  padding:0;
+}
+
+.no-gutters　> .col,
+.no-gutters　> [class*="col-"] {
+  margin:0;
+  padding:0;
+}
