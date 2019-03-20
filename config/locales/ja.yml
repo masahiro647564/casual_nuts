@@ -6,7 +6,9 @@ ja:
     attributes:
       post: 
         title: タイトル
-        description: 紹介するナッツの説明  
+        description: 紹介するナッツの説明
+        new_image: 画像
+        image: 画像  
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

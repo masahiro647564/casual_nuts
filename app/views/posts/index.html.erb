@@ -5,7 +5,10 @@
       <a class="btn btn-black btn-lg" href="#" role="button">New Post</a>
     </div>
   </div>
-  <div class="container">
-    <h1>ブランド</h1>
-    <p>ココにサイトの文章が入ります。</p>
-  </div>
+    <% @posts.each do |post|%>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+        <%= show_post_image post %>
+        <h4 class="mt-2"><%= link_to post.title, post_path(post) %></h4>
+        <p><%= truncate(post.description, length: 30) %></p>
+      </div>
+    <% end %> 
