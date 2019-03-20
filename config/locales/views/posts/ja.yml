@@ -1,0 +1,7 @@
+ja:
+  posts:
+    new:
+      title: ナッツ登録
+      description: 紹介するナッツの説明
+    show:
+      description: 紹介するナッツの説明
