@@ -12,3 +12,54 @@
  *
  */
 @import "bootstrap";
+
+
+/* posts index.html.erb */
+
+.nuts-title{
+  font-family: 'Playfair Display', serif;
+}
+
+.jumbotron {
+  background-image: url("casual_nuts.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 0;
+}
+
+.nuts-world  {
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: fantasy;
+}
+
+/* app/views/shared _header.html.erb */
+
+.navbar-brand {
+  margin-left: 5%;
+}
+.nav-item  {
+  float: right;
+  display: block;
+}
+
+.navbar-nav {
+  position: absolute;
+  right: 10%;
+} 
+
+.collapse navbar-collapse {
+  float: right;
+  display: block;
+}
+
+.btn-black {
+    border-radius: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Avenir', serif;
+    margin-left: 5%;
+    margin-top: 5%;
+    display: inline-block;
+}
