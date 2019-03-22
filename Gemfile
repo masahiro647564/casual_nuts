@@ -39,6 +39,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'devise'
 gem 'mini_magick'
+gem 'kaminari'
 
 
 group :development, :test do

@@ -14,3 +14,4 @@ ja:
       question_post: "%{post}を削除しますか?"
       delete_action: 削除する
       chancel: キャンセル
+      comment_new: コメントを投稿する

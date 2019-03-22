@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.with_attached_image.page(params[:page]).per(4)
   end
 
   def new
@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.with_attached_image.includes(comments: :user).find(params[:id])
   end
 
   def edit

@@ -1,4 +1,3 @@
----
 ja:
   activerecord:
     models:
@@ -16,7 +15,15 @@ ja:
         password: パスワード
         password_confirmation: パスワード再入力
         current_password: 現在のパスワード
-        remember_me: ログイン情報を記録する    
+        remember_me: ログイン情報を記録する
+      comment:
+        title: タイトル
+        body: 本文
+        evaluation: いいね
+        post_id: ナッツ
+        post: ナッツ
+        user_id: ユーザー
+        user: ユーザー      
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
