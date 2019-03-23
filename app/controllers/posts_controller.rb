@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.with_attached_image.page(params[:page]).per(8)
+    @posts = Post.with_attached_image.page(params[:page]).per(9)
   end
 
   def new
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :description, :new_image)
+      params.require(:post).permit(:title, :description, :new_image, :nut_id, :genre_id)
     end
 
     def set_post

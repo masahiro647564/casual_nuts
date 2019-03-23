@@ -92,3 +92,10 @@ body {
   border: 1px solid #dcdcdc;
   background-color: #f8f8ff;
 }
+
+
+/* app/views/posts/show.html.erb */
+.table-warning {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

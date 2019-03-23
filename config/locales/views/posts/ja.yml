@@ -5,7 +5,11 @@ ja:
       description: 紹介するナッツの説明
     edit:
       title: ナッツ更新  
+    form:
+      include_blank: カテゴリーを選択してください
     show:
+      nut: 使ったナッツ
+      genre: ジャンル
       description: 紹介するナッツの説明
       edit: 編集
       return: 戻る

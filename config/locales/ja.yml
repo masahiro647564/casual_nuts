@@ -8,6 +8,10 @@ ja:
         description: 紹介記事
         new_image: 画像
         image: 画像
+        nut_id: カテゴリー
+        nut: カテゴリー
+        genre: ジャンル
+        genre_id: ジャンル
       user:
         email: メールアドレス
         nick_name: ニックネーム

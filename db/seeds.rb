@@ -7,7 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 nuts = %w(アーモンド カシューナッツ ピスタチオ マカダミアナッツ 胡桃 ヘーゼルナッツ ピーナッツ ジャイアントコーン ミックスナッツ ピーカンナッツ)
+genres = %w(デザート おやつ 和食  健康食品 洋食 ダイエット 中華 イタリアン フレンチ アジアン・エスニック )
 
 nuts.each do |nut|
   Nut.create(name: nut)
+end
+
+genres.each do |genre|
+  Genre.create(name: genre)
 end

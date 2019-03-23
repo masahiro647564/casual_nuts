@@ -5,6 +5,16 @@
     </div>
     <div class="col-md-8">
       <h2><%= @post.title %></h2>
+      <table class="table table-bordered">
+        <tr class="table-warning">
+          <th><%= t ".nut" %></th>
+          <th><%= @post.nut&.name %></th>
+        </tr>
+        <tr class="table-warning">
+          <th><%= t ".genre" %></th>
+          <th><%= @post.genre&.name %></th>
+        </tr>  
+      </table>
     </div>
   </div>
   <hr>
