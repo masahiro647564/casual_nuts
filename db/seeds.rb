@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+nuts = %w(アーモンド カシューナッツ ピスタチオ マカダミアナッツ 胡桃 ヘーゼルナッツ ピーナッツ ジャイアントコーン ミックスナッツ ピーカンナッツ)
+
+nuts.each do |nut|
+  Nut.create(name: nut)
+end

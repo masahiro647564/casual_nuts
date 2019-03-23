@@ -13,8 +13,11 @@
  */
 @import "bootstrap";
 
+body {
+  background-color: rgb(240, 235, 229);
+}
 
-/* posts index.html.erb */
+/* homes index.html.erb */
 
 .nuts-title{
   font-family: 'Playfair Display', serif;
@@ -35,7 +38,25 @@
   font-family: fantasy;
 }
 
+.introduce {
+  margin-top: 5 ;
+  margin-right: 15%;
+  margin-left: 15%;
+  padding: 1%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.952)
+}
+
+.text-center {
+  line-height: 90px;
+}
 /* app/views/shared _header.html.erb */
+
+.header-contents {
+  width: 100%;
+  margin: 0;
+}
+
 
 .navbar-brand {
   margin-left: 5%;
