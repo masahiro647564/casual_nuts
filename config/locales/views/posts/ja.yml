@@ -7,6 +7,8 @@ ja:
       title: ナッツ更新  
     form:
       include_blank: カテゴリーを選択してください
+    index:
+      nut: 使ったナッツ
     show:
       nut: 使ったナッツ
       genre: ジャンル
