@@ -6,6 +6,9 @@
               <div class="card mb-4">
                 <%= show_post_image post %>
                 <h4 class="post-title"><%= post.title %></h4>
+                <p class="post-genre">ジャンル:<%= post.genre.name %></p>
+                <p class="post-nuts">使ったナッツ:<%= post.nut.name %></p>
+                <p class="post-create"><%= post.created_at.strftime('%Y/%m/%d') %></p>
                 <p class="post-description"><%= truncate(post.description, length: 20) %></p>
                 <h5 class="post-link"><%= link_to t(".さらに読む"), post_path(post), class: "blue-button" %></h5>
               </div>

@@ -5,12 +5,17 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <%= search_form_for @q, class: "form-inline my-2 my-lg-0" do |f| %>
-      <%= f.search_field :nut_id_or_genre_id_cont, class: "form-control mr-sm-2 ml-5" %>
+      <%= f.search_field :nut_name_or_genre_name_cont, class: "form-control mr-sm-2 ml-5" %>
       <%= f.submit t(".search"), class: "btn btn-outline-success my-2 my-sm-0" %>
     <% end %>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <%= link_to t(".New Post"), new_post_path, class: "nav-link" %>
+        <li class="nav-item mr-3">
+          <%= link_to t(".New Post"), new_post_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item mr-3">
+          <%= link_to t(".Article"), posts_path, class: "nav-link" %>
+        </li>
         <% if user_signed_in? %>
           <li class="nav-item mr-3">
             <%= link_to t(".Account"), edit_user_registration_path, class: "nav-link" %>

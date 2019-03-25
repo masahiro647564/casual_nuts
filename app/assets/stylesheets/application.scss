@@ -39,17 +39,38 @@ body {
 }
 
 .introduce {
-  margin-top: 5 ;
+  margin: 10%;
   margin-right: 15%;
   margin-left: 15%;
   padding: 1%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.952)
+  background-color: rgba(226, 211, 211, 0.952)
+}
+
+.tasty {
+  color: brown;
+}
+
+.healthy {
+  color: blue;
+}
+
+.beauty {
+  color: palevioletred
+}
+
+.nuts-explain h2, h4 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .text-center {
   line-height: 90px;
 }
+
+.nuts-button {
+  padding: 10%;
+}
+
 /* app/views/shared _header.html.erb */
 
 .header-contents {
@@ -103,10 +124,22 @@ body {
 
 /* app/views/posts/index.html.erb */
 .post-title {
+  text-align: center;
+}
+
+.post-genre {
+  margin-left: 10px;
+}
+
+.post-nuts {
   margin-left: 10px;
 }
 
 .post-description {
+  margin-left: 10px;
+}
+
+.post-create {
   margin-left: 10px;
 }
 

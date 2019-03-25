@@ -3,8 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :set_search
 
   def set_search
-    q = params[:q]
-    @q = Post.includes(:nut_id_or_genre_id).ransack(params[:q])
+    @q = Post.includes(:nut_name_or_genre_name).ransack(params[:q])
     @posts = @q.result.with_attached_image.find_newest_posts(params[:page])
   end
 

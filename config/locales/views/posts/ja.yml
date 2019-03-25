@@ -12,6 +12,7 @@ ja:
     show:
       nut: 使ったナッツ
       genre: ジャンル
+      created_at: 投稿日時
       description: 紹介するナッツの説明
       edit: 編集
       return: 戻る
