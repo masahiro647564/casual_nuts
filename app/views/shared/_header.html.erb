@@ -4,6 +4,10 @@
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <%= search_form_for @q, class: "form-inline my-2 my-lg-0" do |f| %>
+      <%= f.search_field :nut_id_or_genre_id_cont, class: "form-control mr-sm-2 ml-5" %>
+      <%= f.submit t(".search"), class: "btn btn-outline-success my-2 my-sm-0" %>
+    <% end %>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <% if user_signed_in? %>

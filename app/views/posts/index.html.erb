@@ -1,28 +1,19 @@
-<div class="col-10 mx-auto mt-4 mb-4" >
-  <nav class="blog-nav d-flex justify-content-between ">
-    <a class="text-muted" href="#">デザート</a>
-    <a class="text-muted" href="#">おやつ</a>
-    <a class="text-muted" href="#">和食</a>
-    <a class="text-muted" href="#">洋食</a>
-    <a class="text-muted" href="#">ダイエット</a>
-    <a class="text-muted" href="#">健康食品</a>
-    <a class="text-muted" href="#">中華</a>
-    <a class="text-muted" href="#">イタリアン</a>
-    <a class="text-muted" href="#">フレンチ</a>
-    <a class="text-muted" href="#">アジアン・エスニック<a>
-  </nav>
-</div> 
-
-
-<% @posts.each do |post| %>
-  <div class="col-lg-4 col-md-4 col-sm-4 mb-3 mt-4 text-center">
-    <%= show_post_image post %>
-    <h4 class="mt-2"><%= link_to post.title, post_path(post) %></h4>
-    <h6 class="mt-2"><%= t ".nut" %>:<%= post.nut&.name %></h6>
-    <p><%= truncate(post.description, length: 20) %></p>
-  </div>
-<% end %>
-
-<div class="col-12">
-  <%= paginate @posts %>
-</div>
+  
+    
+    <% @posts.each do |post| %>
+      <div class="col-lg-4 col-md-4 col-sm-4 mb-3 mt-4">
+        <div class="mb-5">
+            <div class="card mb-4">
+              <%= show_post_image post %>
+              <h4><%= post.title %></h4>
+              <p><%= truncate(post.description, length: 20) %></p>
+              <h4><%= link_to t(".さらに読む"), post_path(post), class: "blue-button" %></h4>
+            </div>
+        </div>
+      </div>
+    <% end %>
+    
+    <div class="col-12">
+      <%= paginate @posts %>
+    </div>
+  

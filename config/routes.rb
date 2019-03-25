@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  root 'homes#index'
   get 'homes', to: 'homes#index'
   resources :posts do
     resources :comments, expect: :index

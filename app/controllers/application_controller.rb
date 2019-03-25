@@ -1,6 +1,12 @@
 class ApplicationController < ActionController::Base
-
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_search
+
+  def set_search
+    q = params[:q]
+    @q = Post.includes(:nut_id_or_genre_id).ransack(params[:q])
+    @posts = @q.result.with_attached_image.find_newest_posts(params[:page])
+  end
 
   protected
 

@@ -40,6 +40,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'mini_magick'
 gem 'kaminari'
+gem 'ransack'
 
 
 group :development, :test do
