@@ -99,3 +99,17 @@ body {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+
+/* app/views/posts/index.html.erb */
+.post-title {
+  margin-left: 10px;
+}
+
+.post-description {
+  margin-left: 10px;
+}
+
+.post-link {
+  margin-left: 5px;
+}

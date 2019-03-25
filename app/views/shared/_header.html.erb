@@ -10,6 +10,7 @@
     <% end %>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        <%= link_to t(".New Post"), new_post_path, class: "nav-link" %>
         <% if user_signed_in? %>
           <li class="nav-item mr-3">
             <%= link_to t(".Account"), edit_user_registration_path, class: "nav-link" %>
