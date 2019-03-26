@@ -12,11 +12,14 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
-      redirect_to @post, notice: "ナッツを登録しました!"
-    else
-      render :new
+    if current_user
+      @post.user_id = current_user.id
     end
+      if @post.save
+        redirect_to @post, notice: "ナッツを登録しました!"
+      else
+        render :new
+      end
   end
 
   def show

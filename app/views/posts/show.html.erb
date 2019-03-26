@@ -24,11 +24,12 @@
   <hr>
   <h4><%= t ".description" %></h4>
   <%= simple_format @post.description %>
-  <% if user_signed_in? %>
-  <%= link_to t(".edit"), edit_post_path(@post), class: "btn btn-primary" %>
-  <%= button_tag t(".delete"), class: "btn btn-warning", data: { toggle: "modal", target: "#delete-post" } %>
-  
-    <%= link_to t(".comment_new"), new_post_comment_path(@post), class: "btn btn-info" %>    
+  <% if user_signed_in?%>
+    <% if current_user.id == @post.user_id %>
+      <%= link_to t(".edit"), edit_post_path(@post), class: "btn btn-primary" %>
+      <%= button_tag t(".delete"), class: "btn btn-warning", data: { toggle: "modal", target: "#delete-post" } %>
+    <% end %>
+    <%= link_to t(".comment_new"), new_post_comment_path(@post), class: "btn btn-info" %>     
   <% end %>
   <%= link_to t(".return"), posts_path, class: "btn btn-secondary" %>
   <hr>
