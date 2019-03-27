@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'homes#index'
   get 'homes', to: 'homes#index'
-  post   '/like/:post_id' => 'likes#like',   as: 'like'
-  delete '/like/:post_id' => 'likes#unlike', as: 'unlike'
+  resources :posts do
+    resources :likes, only: [:create, :destroy]
+  end
   resources :posts do
     resources :comments, expect: :index
   end

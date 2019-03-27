@@ -3,16 +3,20 @@
       <% @posts.each do |post| %>
         <div class="col-lg-4 col-md-4 col-sm-4 mb-3 mt-4">
           <div class="mb-5">
-              <div class="card mb-4">
-                <%= show_post_image post %>
-                <h4 class="post-title"><%= post.title %></h4>
-                <p class="post-genre">ジャンル:<%= post.genre.name %></p>
-                <p class="post-nuts">使ったナッツ:<%= post.nut.name %></p>
-                <p class="post-create"><%= post.created_at.strftime('%Y/%m/%d') %></p>
-                <p class="post-description"><%= truncate(post.description, length: 20) %></p>
-                <%= render partial: 'posts/posts', locals: { post: post } %>
-                <h5 class="post-link"><%= link_to t(".さらに読む"), post_path(post), class: "blue-button" %></h5>
-              </div>
+            <div class="card mb-4">
+              <%= show_post_image post %>
+              <h4 class="post-title"><%= post.title %></h4>
+              <p class="post-genre">ジャンル:<%= post.genre.name %></p>
+              <p class="post-nuts">使ったナッツ:<%= post.nut.name %></p>
+              <p class="post-create"><%= post.created_at.strftime('%Y/%m/%d') %></p>
+              <p class="post-description"><%= truncate(post.description, length: 20) %></p>
+              <% if user_signed_in?%>
+                <div id="likes_buttons_<%= post.id %>">
+                  <%= render partial: 'likes/like', locals: { post: post, likes: @likes} %>
+                </div>
+              <% end %>  
+              <h5 class="post-link"><%= link_to t(".さらに読む"), post_path(post), class: "blue-button" %></h5>
+            </div>
           </div>
         </div>
       <% end %>

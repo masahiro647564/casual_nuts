@@ -19,6 +19,9 @@
           <th><%= @post.created_at.strftime('%Y/%m/%d') %></th>
         </tr>    
       </table>
+      <div id="likes_buttons_<%= @post.id %>">
+          <%= render partial: 'likes/like', locals: { post: @post, likes: @likes} %>
+        </div> 
     </div>
   </div>
   <hr>

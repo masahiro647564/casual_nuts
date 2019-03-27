@@ -1,22 +1,22 @@
 class LikesController < ApplicationController
-  before_action :set_variables
+  before_action :set_post
 
-  def like
-    like = current_user.likes.new(post_id: post.id)
-    like.save
+  def create
+    @like = Like.create(user_id: current_user.id, post_id: params[:post_id])
+    @likes = Like.where(post_id: params[:post_id])
     @post.reload
   end
 
-  def unlike
-    like = current_user.likes.find_by(post_id: post.id)
+  def destroy
+    like = Like.find_by(user_id: current_user.id, post_id: params[:post_id])
     like.destroy
+    @likes = Like.where(post_id: params[:post_id])
     @post.reload
   end
 
   private
 
-  def set_variables
+  def set_post
     @post = Post.find(params[:post_id])
-    @id_name = "#like-link-#{@post.id}"
   end
 end
