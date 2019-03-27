@@ -41,6 +41,7 @@ gem 'devise'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'ransack'
+gem 'rakuten_web_service'
 
 
 group :development, :test do
