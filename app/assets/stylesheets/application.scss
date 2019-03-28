@@ -88,11 +88,10 @@ body {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
+
 .button:hover{
     background-color: #f9c500; /*ボタン色*/
 }
-
-
 
 
 /* app/views/shared _header.html.erb */
@@ -179,27 +178,6 @@ body {
 
 }
 
-
-
-/* いいね機能のcss */
-/* .iine__button{
-    background: linear-gradient(to right, #feb400, #FFE300);
-    line-height: 42px;
-    color: #6d3701;
-    font-size: 14px;
-    display: inline-block;
-    padding: 0 18px;
-    border-radius: 100px;
-    font-weight: bold;
-}
-
-.material-icons {
-  float: right;
-  margin-right: 20px;
-}
-*/
-
-
 .like-btn {
   font-size: 20px;  
   color: #f11a2c;
@@ -227,3 +205,5 @@ body {
 .grey-text {
   margin-left: 80%;
 }
+
+
