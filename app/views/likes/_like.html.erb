@@ -1,0 +1,36 @@
+<% if user_signed_in? %>
+  <% unless post.like_user(current_user.id).blank? %>
+    <%= link_to post_like_path(post_id: post.id ,id: post.likes[0].id), method: :delete, remote: true do %>
+      <div class="vertical_like">
+        <% if Like.find_by(user_id: current_user.id, post_id: post.id) %>
+          <span class="fa fa-heart like-btn"></span>
+        <% else %>
+          <%= link_to("/likes/#{post.id}/create", {method: "post"}) do %>
+            <span class="fa fa-heart like-btn"></span>
+          <% end %>
+        <% end %>
+      </div>
+      <span class="red-text">
+        <%= post.likes_count %>
+      </span>
+    <% end %>
+  <% else %>
+    <%= link_to post_likes_path(post.id), method: :post, remote: true do %>
+      <div class="vertical_like">
+        <i class="fa fa-heart like-btn-unlike fa-1x"></i>
+        <span class="grey-text text-darken-2">
+          <%= post.likes_count %>
+        </span>
+      </div>
+    <% end %>
+  <% end %>
+
+<% else %>
+
+  <div class="vertical_like">
+    <i class="fas fa-heart like-btn fa-1x"></i>
+    <span class="red-text" >
+      <%= post.likes_count %>
+    </span>
+  </div>
+<% end %>

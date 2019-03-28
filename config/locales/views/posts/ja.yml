@@ -1,0 +1,24 @@
+ja:
+  posts:
+    new:
+      title: ナッツ登録
+      description: 紹介するナッツの説明
+    edit:
+      title: ナッツ更新  
+    form:
+      include_blank: カテゴリーを選択してください
+    index:
+      nut: 使ったナッツ
+    show:
+      nut: 使ったナッツ
+      genre: ジャンル
+      created_at: 投稿日時
+      description: 紹介するナッツの説明
+      edit: 編集
+      return: 戻る
+      delete: 削除
+      modal_title: ナッツ削除
+      question_post: "%{post}を削除しますか?"
+      delete_action: 削除する
+      chancel: キャンセル
+      comment_new: コメントを投稿する

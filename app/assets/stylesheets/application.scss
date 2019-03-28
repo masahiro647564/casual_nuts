@@ -12,3 +12,218 @@
  *
  */
 @import "bootstrap";
+
+body {
+  background-color: rgb(240, 235, 229);
+}
+
+/* homes index.html.erb */
+
+.nuts-title{
+  font-family: 'Playfair Display', serif;
+  margin-top: 5%;
+}
+
+.jumbotron {
+  background-image: url("casual_nuts.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 0;
+}
+
+.nuts-world  {
+  font-size: 20px;
+  margin-top: 40px;
+  font-family: fantasy;
+}
+
+.introduce {
+  margin: 10% 5% 10% 5% ;
+  height: 800px;
+  width: 100%;
+  background-color: rgba(226, 211, 211, 0.952);
+  background-image: url("woman.jpeg");
+  opacity: 0.8;
+  background-size: cover;
+  position: relative;
+}
+
+
+.nuts-explain h2, h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nuts-explain {
+  color: #f8f8ff;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  font-family: "Gill Sans", sans-serif;
+}
+
+.text-box {
+  font-family: inherit;
+  padding-top: 250px;
+  text-align: center;
+}
+
+.text-center1 {
+  margin-bottom: 80px;
+}
+
+.text-center2 {
+  margin-bottom: 60px;
+}
+
+.button{
+    display:block;
+    width: 250px;
+    height:70px;
+    line-height: 70px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    background-color: #f39800; /*ボタン色*/
+    border-radius: 5px; /*角丸*/
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.button:hover{
+    background-color: #f9c500; /*ボタン色*/
+}
+
+
+
+
+/* app/views/shared _header.html.erb */
+
+.header-contents {
+  width: 100%;
+  margin: 0;
+}
+
+
+.navbar-brand {
+  margin-left: 5%;
+}
+.nav-item  {
+  float: right;
+  display: block;
+}
+
+.navbar-nav {
+  position: absolute;
+  right: 10%;
+} 
+
+.collapse navbar-collapse {
+  float: right;
+  display: block;
+}
+
+.btn-black {
+    border-radius: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Avenir', serif;
+    margin-top: 5%;
+    margin-right: 5%;
+    display: inline-block;
+}
+
+/* ユーザー登録 */
+.user-box {
+  padding: 30px;
+  border: 1px solid #dcdcdc;
+  background-color: #f8f8ff;
+}
+
+
+/* app/views/posts/show.html.erb */
+.table-warning {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* app/views/posts/index.html.erb */
+.post-title {
+  text-align: center;
+}
+
+.post-genre {
+  margin-left: 10px;
+}
+
+.post-nuts {
+  margin-left: 10px;
+}
+
+.post-description {
+  margin-left: 10px;
+}
+
+.post-create {
+  margin-left: 10px;
+}
+
+.post-link {
+  margin-left: 5px;
+}
+
+/* 新規投稿機能のボタン */
+.btn-light {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  margin-left: 45%;
+
+}
+
+
+
+/* いいね機能のcss */
+/* .iine__button{
+    background: linear-gradient(to right, #feb400, #FFE300);
+    line-height: 42px;
+    color: #6d3701;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 18px;
+    border-radius: 100px;
+    font-weight: bold;
+}
+
+.material-icons {
+  float: right;
+  margin-right: 20px;
+}
+*/
+
+
+.like-btn {
+  font-size: 20px;  
+  color: #f11a2c;
+  position: relative;
+  left: 80%;
+}
+
+.like-btn-unlike {
+  font-size: 20px;  
+  position: relative;
+  left: 80%;
+  top: 1px;
+  color: rgb(134, 127, 127);
+}
+
+.red-text {
+  margin-left: 90%;
+  margin-bottom: 5%;
+  display: block;
+  position: relative;
+  bottom: 25px;
+  right: 10px;
+}
+
+.grey-text {
+  margin-left: 80%;
+}
